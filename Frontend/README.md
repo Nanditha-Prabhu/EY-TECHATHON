@@ -1,4 +1,4 @@
-# stylify
+# Stylify.AI
 
 A new Flutter project.
 
