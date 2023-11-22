@@ -2,7 +2,6 @@ import "../assets/styles/common.css";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
-
 const Land = () => {
   const category = [
     "Demand Forecast",
@@ -17,12 +16,10 @@ const Land = () => {
     // Use the map function to create an array of button elements
     const buttons = category.map((item, index) => (
       <div key={index} className=" m-3 sm:m-4">
-        <Link to={'/'+item}>
-        <button
-          className=" shadow-lg menu-btn font-bold text-2xl col-span-1 h-40 w-80 rounded-lg bg-slate-100"
-        >
-          {item}
-        </button>
+        <Link to={"/" + item}>
+          <button className=" shadow-lg menu-btn font-bold text-2xl col-span-1 h-40 w-80 rounded-lg bg-slate-100">
+            {item}
+          </button>
         </Link>
       </div>
     ));

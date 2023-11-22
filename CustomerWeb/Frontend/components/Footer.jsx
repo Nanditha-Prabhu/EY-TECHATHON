@@ -5,11 +5,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="text-teal-600 dark:text-teal-300">
-            <img
-                    className="h-20 w-auto rounded-full"
-                    src="./assets/images/company_logo.jpeg"
-                    alt="Your Company"
-                  />
+              <img
+                className="h-20 w-auto rounded-full"
+                src="./assets/images/company_logo.jpeg"
+                alt="Your Company"
+              />
             </div>
 
             <p className="mt-4 max-w-xs text-gray-500 dark:text-gray-400">
@@ -109,8 +109,6 @@ export default function Footer() {
                   </svg>
                 </a>
               </li>
-
-              
             </ul>
           </div>
 

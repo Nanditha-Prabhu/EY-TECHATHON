@@ -2,12 +2,8 @@ import Land from "../components/Land";
 import Login from "../components/Login";
 import DemandForcast from "../components/DemandForcast";
 import InventoryManagement from "../components/InventoryManagement";
-import DynamicPricing from "../components/DynamicPricing"
-
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import DynamicPricing from "../components/DynamicPricing";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +18,7 @@ const router = createBrowserRouter([
     path: "/Login",
     element: (
       <>
-        <Login/>
+        <Login />
       </>
     ),
   },
@@ -30,7 +26,7 @@ const router = createBrowserRouter([
     path: "/Demand Forecast",
     element: (
       <>
-        <DemandForcast/>
+        <DemandForcast />
       </>
     ),
   },
@@ -38,7 +34,7 @@ const router = createBrowserRouter([
     path: "/Inventory Management",
     element: (
       <>
-        <InventoryManagement/>
+        <InventoryManagement />
       </>
     ),
   },
@@ -46,7 +42,7 @@ const router = createBrowserRouter([
     path: "/Dynamic Pricing",
     element: (
       <>
-        <DynamicPricing/>
+        <DynamicPricing />
       </>
     ),
   },
@@ -57,5 +53,5 @@ export default function App() {
     <>
       <RouterProvider router={router} />
     </>
-  )
+  );
 }

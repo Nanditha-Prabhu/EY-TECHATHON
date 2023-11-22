@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "Shop", href: "/Shop", current: false},
+  { name: "Shop", href: "/Shop", current: false },
   { name: "Virtual Try-On", href: "#", current: false },
   { name: "Bazar Sahayak", href: "#", current: false },
   { name: "Login", href: "/Login", current: false },
@@ -65,7 +65,7 @@ function Navbar() {
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
-                        to= {item.href} 
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
@@ -76,13 +76,13 @@ function Navbar() {
                       >
                         {item.name}
                       </Link>
-                        
                     ))}
 
                     {/*Search bar*/}
                     <div className="relative">
                       <label htmlFor="Search" className="sr-only">
-                        {" "}Search for...{" "}
+                        {" "}
+                        Search for...{" "}
                       </label>
 
                       <input
@@ -250,6 +250,5 @@ function Navbar() {
     </Disclosure>
   );
 }
-
 
 export default Navbar;

@@ -72,9 +72,16 @@ const Land = () => {
   return (
     <div className="bg-slate-900 border-y-2 border-solid border-slate-900 flex flex-col sm:flex-row ">
       <div className="welcome-text text-center sm:text-start p-8 sm:p-0 bg-[#F2FEFE] flex flex-col justify-center sm:pl-10 ">
-        <h1 className="text-slate-900 text-4xl font-semibold">What do you want to buy today, Consumer?</h1>
-        <h2 className="text-slate-900 text-xl my-2">Welcome to <span className=" font-semibold text-[#00C3E1]">Stylify-AI!</span></h2>
-        <h3 className="text-slate-900">Revolutionizing Retail with AI-Driven Experiences</h3>
+        <h1 className="text-slate-900 text-4xl font-semibold">
+          What do you want to buy today, Consumer?
+        </h1>
+        <h2 className="text-slate-900 text-xl my-2">
+          Welcome to{" "}
+          <span className=" font-semibold text-[#00C3E1]">Stylify-AI!</span>
+        </h2>
+        <h3 className="text-slate-900">
+          Revolutionizing Retail with AI-Driven Experiences
+        </h3>
       </div>
       <img
         className="w-0 sm:w-1/4 sm:rounded-r-full justify-center mr-7"
