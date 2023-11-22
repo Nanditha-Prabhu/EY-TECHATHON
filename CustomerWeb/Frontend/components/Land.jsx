@@ -70,7 +70,7 @@ const Land = () => {
   }, []); // Empty dependency array to run the effect only once
 
   return (
-    <div className="bg-slate-900 border-y-2 -z-10 border-solid border-slate-900 flex flex-col sm:flex-row ">
+    <div className="bg-slate-900 border-y-2 border-solid border-slate-900 flex flex-col sm:flex-row ">
       <div className="welcome-text text-center sm:text-start p-8 sm:p-0 bg-[#F2FEFE] flex flex-col justify-center sm:pl-10 ">
         <h1 className="text-slate-900 text-4xl font-semibold">What do you want to buy today, Consumer?</h1>
         <h2 className="text-slate-900 text-xl my-2">Welcome to <span className=" font-semibold text-[#00C3E1]">Stylify-AI!</span></h2>
