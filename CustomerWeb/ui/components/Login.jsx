@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../assets/styles/common.css";
 import PropTypes from "prop-types";
 
-async function loginUser(credentials) {
-  return fetch("http://localhost:8080/login", {
+async function signup(credentials) {
+  return fetch("http://localhost:3000/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,15 +13,20 @@ async function loginUser(credentials) {
 }
 
 export default function Login({ setToken }) {
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [username, setUserName] = useState("");
+  const [phoneNo, setPhoneNo] = useState("");
+  const [emailId, setEmailId] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await loginUser({
+    const token = await signup({
       username,
+      phoneNo,
+      emailId,
       password,
     });
+    console.log(username, phoneNo, emailId, password);
     setToken(token);
   };
 
@@ -29,34 +34,66 @@ export default function Login({ setToken }) {
     <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-lg">
         <h1 className="text-center text-2xl font-bold text-[#00C3E1]  sm:text-3xl">
-          Get started today
+          Get started today!
         </h1>
 
         <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
           sunt dolores deleniti inventore quaerat mollitia?
         </p>
-
         <form
           onSubmit={handleSubmit}
           action=""
           className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
         >
           <p className="text-center text-white text-lg font-medium">
-            Sign in to your account
+            Sign Up to your account
           </p>
 
           <div>
-            <label htmlFor="email" className="sr-only">
+            <label htmlFor="text" className="sr-only">
+              Username
+            </label>
+
+            <div className="relative">
+              <input
+                type="text"
+                onChange={(e) => setUserName(e.target.value)}
+                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Enter username"
+                name="username"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="number" className="sr-only">
+              Phone Number
+            </label>
+
+            <div className="relative">
+              <input
+                type="number"
+                onChange={(e) => setPhoneNo(e.target.value)}
+                className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                placeholder="Enter Phone Number"
+                name="phoneNo"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="text" className="sr-only">
               Email
             </label>
 
             <div className="relative">
               <input
                 type="email"
-                onChange={(e) => setUserName(e.target.value)}
+                onChange={(e) => setEmailId(e.target.value)}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Enter email"
+                name="emailId"
               />
 
               <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -89,6 +126,7 @@ export default function Login({ setToken }) {
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Enter password"
+                name="password"
               />
 
               <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
@@ -120,13 +158,13 @@ export default function Login({ setToken }) {
             type="submit"
             className="block submit-btn w-full rounded-lg font-extrabold bg-[#FEA52B] px-5 py-3 text-sm  text-white"
           >
-            Sign in
+            Sign Up
           </button>
 
           <p className="text-center text-sm text-gray-500">
-            No account?
+            Already have an account?
             <a className="underline" href="">
-              Sign up
+              Sign In
             </a>
           </p>
         </form>
@@ -135,6 +173,6 @@ export default function Login({ setToken }) {
   );
 }
 
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired,
-};
+// Login.propTypes = {
+//   setToken: PropTypes.func.isRequired,
+// };
