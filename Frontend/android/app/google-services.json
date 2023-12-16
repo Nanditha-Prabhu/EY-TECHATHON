@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "515965272178",
+    "project_id": "retailai-bff85",
+    "storage_bucket": "retailai-bff85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515965272178:android:b568fcd34aa1ded32b82eb",
+        "android_client_info": {
+          "package_name": "com.example.retail_ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwen6o2HWFru-Gc5rgPgQVOtU-st63ds0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515965272178:android:924c5a8887f8cf442b82eb",
+        "android_client_info": {
+          "package_name": "com.mycompany.stylify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwen6o2HWFru-Gc5rgPgQVOtU-st63ds0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
