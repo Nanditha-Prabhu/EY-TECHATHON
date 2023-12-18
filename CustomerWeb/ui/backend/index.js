@@ -3,11 +3,11 @@ import express from "express"
 import mongoose, { setDriver } from "mongoose"
 import User from "./model/User.js"
 import Clothes from "./model/Clothes.js"
+import Items from "./model/Items.js"
 
 
 /* Constants Initializations */
-// const mongourl = "mongodb+srv://user1:user1@cluster0.mbfpvjt.mongodb.net/?retryWrites=true&w=majority";
-const mongourl = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1"
+const mongourl = "mongodb+srv://user1:user1@cluster0.mbfpvjt.mongodb.net/StylifyAI?retryWrites=true&w=majority";
 
 /* Functions or objects initializations */
 const app = express();
@@ -72,7 +72,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/getClothes", async (req, res) => {
-    const clothes = await Clothes.find()
-    console.log(clothes)
-    res.status(200).json(clothes)
+    const Item = await Items.find({'ItemId': 'item01164'})
+    console.log(Item.ItemName)
+    res.status(200).json(Item)
 })
