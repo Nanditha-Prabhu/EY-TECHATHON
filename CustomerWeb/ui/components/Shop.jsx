@@ -18,6 +18,7 @@ export default function Shop() {
       {
         clothes.map(cloth => {
           return <div key={cloth._id}>
+            <img src={"data:image/png;base64,"+cloth.Image} alt="" />
             <a href={cloth.ImgAdrs}>{cloth.ItemName}</a>
           </div>
         })
