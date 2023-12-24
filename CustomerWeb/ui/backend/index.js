@@ -3,11 +3,15 @@ import express from "express"
 import mongoose, { setDriver } from "mongoose"
 import User from "./model/User.js"
 import Clothes from "./model/Clothes.js"
+import Items from "./model/Items.js"
 
+import dotenv from "dotenv"
+
+dotenv.config()
 
 /* Constants Initializations */
-// const mongourl = "mongodb+srv://user1:user1@cluster0.mbfpvjt.mongodb.net/?retryWrites=true&w=majority";
-const mongourl = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1"
+const mongourl = process.env.MONGODB_URL;
+// const mongourl = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1"
 
 /* Functions or objects initializations */
 const app = express();
@@ -47,8 +51,7 @@ app.post("/signup", async (req, res) => {
     const { username, phoneNo, emailId, password } = req.body;
 
     // ----- testing ---------
-    // console.log(req.body);
-    // console.log(username, phoneNo, emailId, password);
+    console.log(req.body);
 
     try {
         await User.create({
@@ -71,8 +74,15 @@ app.get("/", (req, res) => {
     res.send("Hello Postman!!")
 })
 
+// app.get("/getClothes", async (req, res) => {
+//     const clothes = await Clothes.find()
+//     console.log(clothes)
+//     res.status(200).json(clothes)
+// })
+
 app.get("/getClothes", async (req, res) => {
-    const clothes = await Clothes.find()
-    console.log(clothes)
-    res.status(200).json(clothes)
+    const Item = await Items.find({})
+    console.log(Item[0].ItemName)
+    console.log(Item[0].Rate);
+    res.status(200).json(Item)
 })

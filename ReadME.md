@@ -1,2 +1,1 @@
-# Enhancing Retail Prices with Gen AI
-
+# EY-TECHATHON
