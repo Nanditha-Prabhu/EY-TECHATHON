@@ -6,17 +6,21 @@ export default function Shop() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getClothes")
-      .then((clothes) => setClothes(clothes.data));
+      .get("http://localhost:3000/getClothes")
+      .then((clothes) => {
+        console.log(clothes);
+        setClothes(clothes.data)
+      });
   }, []);
 
   return (
     <div className="shop-contents bg-slate-500 h-screen w-screen">
-      {clothes.map((cloth) => {
-        <div>
-          <p>{cloth.name}</p>
+      {/* {clothes.map((cloth) => {
+        return <div>
+          <p>{cloth.ItemName}</p>
         </div>;
-      })}
+      })} */}
+      Hello
     </div>
   );
 }

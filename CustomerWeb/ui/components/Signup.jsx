@@ -12,7 +12,7 @@ async function signup(credentials) {
   }).then((data) => data.json());
 }
 
-export default function Login({ setToken }) {
+export default function Signup({ setToken }) {
   const [username, setUserName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [emailId, setEmailId] = useState("");
@@ -34,7 +34,7 @@ export default function Login({ setToken }) {
     <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-lg">
         <h1 className="text-center text-2xl font-bold text-[#00C3E1]  sm:text-3xl">
-          Get started today!
+          Get started today🤩
         </h1>
 
         <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
@@ -163,7 +163,7 @@ export default function Login({ setToken }) {
 
           <p className="text-center text-sm text-gray-500">
             Already have an account?
-            <a className="underline" href="">
+            <a className="underline" href="/Signin">
               Sign In
             </a>
           </p>
