@@ -4,7 +4,8 @@ import Land from "../components/Land";
 import LandContent from "../components/LandContent";
 import Navbar from "../components/Navbar";
 import Shop from "../components/Shop";
-import Login from "../components/Login";
+import Signup from "../components/Signup";
+import Signin from "../components/Signin";
 
 const router = createBrowserRouter([
   {
@@ -29,15 +30,25 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/Login",
+    path: "/Signup",
     element: (
       <>
         <Navbar />
-        <Login />
+        <Signup />
         <Footer />
       </>
     ),
   },
+  {
+    path: "/Signin",
+    element: (
+      <>
+        <Navbar />
+        <Signin />
+        <Footer />
+      </>
+    ),
+  }
   
 ]);
 
