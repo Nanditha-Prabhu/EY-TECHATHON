@@ -2,7 +2,7 @@ export default function LandContent() {
   return (
     <>
       <div className="hiding-overflow overflow-hidden">
-        <div className="about bg-[#00C3E1] p-11 text-right rounded-l-full my-5 ml-10  reveal2 ">
+        <div className="about bg-[#00C3E1] p-11 text-right rounded-lg my-10 reveal2 ">
           <h2 className=" font-bold text-4xl mb-3">About Us</h2>
           <p className=" text-xl font-medium text-gray-100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
@@ -16,7 +16,110 @@ export default function LandContent() {
           </p>
         </div>
       </div>
-      <div className="hiding-overflow overflow-hidden">
+      <div className="flex flex-row justify-center items-center py-10 text-center mt-10 text-yellow-500 text-5xl">
+        <svg
+          width="60px"
+          height="60px"
+          viewBox="-6 -6 72.00 72.00"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="#000000"
+          stroke="#000000"
+          transform="matrix(-1, 0, 0, -1, 0, 0)"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            {" "}
+            <g
+              fill="none"
+              fill-rule="evenodd"
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+            >
+              {" "}
+              <g
+                fill="#ffffff"
+                id="010---Bow-Tie"
+                transform="translate(-1.000000, 0.000000)"
+              >
+                {" "}
+                <path
+                  d="M60.938,26.026 C59.4320062,18.7524698 59.4320062,11.2475302 60.938,3.974 C61.1599468,2.88877071 60.7584625,1.7703227 59.897,1.074 C59.0039287,0.342851846 57.777505,0.171175665 56.718,0.629 L35.771,9.583 C35.1547513,7.46036576 33.2102802,6.00012924 31,6.00012924 C28.7897198,6.00012924 26.8452487,7.46036576 26.229,9.583 L5.283,0.63 C4.22318641,0.17199989 2.99638291,0.343675222 2.103,1.075 C1.24153747,1.7713227 0.8400532,2.88977071 1.062,3.975 C2.56799721,11.248193 2.56799721,18.752807 1.062,26.026 C0.830971007,27.111651 1.23368277,28.2345973 2.102,28.926 C2.99536267,29.6571316 4.22169495,29.8295122 5.282,29.373 L26.23,20.417 C26.8461708,22.5391387 28.7902174,23.999013 31,23.999013 C33.2097826,23.999013 35.1538292,22.5391387 35.77,20.417 L56.718,29.371 C57.778305,29.8275122 59.0046373,29.6551316 59.898,28.924 C60.7657818,28.2330981 61.168458,27.1110253 60.938,26.026 Z M4.5,27.531 C4.12436756,27.6974506 3.68693822,27.6374492 3.37,27.376 C3.08484552,27.1511762 2.95094807,26.7846997 3.024,26.429 C4.58499664,18.8892814 4.58499664,11.1097186 3.024,3.57 C2.95086927,3.21458698 3.08481712,2.84835963 3.37,2.624 C3.5631648,2.46390956 3.80611846,2.37620577 4.057,2.376 C4.20943073,2.37677615 4.36012573,2.4084119 4.5,2.469 L26,11.66 L26,12.78 L22.2,12.02 C21.6682494,11.93256 21.1628458,12.2822052 21.0571604,12.8106321 C20.951475,13.339059 21.2835226,13.8561944 21.808,13.98 L26.008,14.82 L26.008,15.256 L16.721,18.042 C16.246895,18.1838658 15.9478592,18.6511704 16.0176699,19.1410968 C16.0874807,19.6310233 16.5051393,19.9962043 17,20 C17.0971759,19.9997023 17.1938137,19.9855602 17.287,19.958 L26,17.344 L26,18.344 L4.5,27.531 Z M31,22 C29.3431458,22 28,20.6568542 28,19 L28,11 C28,9.34314575 29.3431458,8 31,8 C32.6568542,8 34,9.34314575 34,11 L34,19 C34,20.6568542 32.6568542,22 31,22 Z M58.979,26.43 C59.0518884,26.7853951 58.9179861,27.1514977 58.633,27.376 C58.3165537,27.6385695 57.8784603,27.6986619 57.503,27.531 L36,18.34 L36,17.34 L44.713,19.954 C44.8059896,19.9829152 44.9026315,19.9984049 45,20 C45.4963547,20.0001151 45.9176738,19.6361355 45.9896594,19.1450285 C46.0616449,18.6539215 45.7625078,18.1843387 45.287,18.042 L36,15.256 L36,14.82 L40.2,13.98 C40.7244774,13.8561944 41.056525,13.339059 40.9508396,12.8106321 C40.8451542,12.2822052 40.3397506,11.93256 39.808,12.02 L36.008,12.78 L36.008,11.66 L57.508,2.469 C57.883358,2.30296549 58.3202763,2.36294985 58.637,2.624 C58.9221829,2.84835963 59.0561307,3.21458698 58.983,3.57 C57.4206873,11.1097826 57.419326,18.8896711 58.979,26.43 Z"
+                  fill-rule="nonzero"
+                  id="Shape"
+                ></path>{" "}
+                <path
+                  d="M18,12.667 C18.4907827,12.6673557 18.9092874,12.3115013 18.9878345,11.8270447 C19.0663816,11.3425882 18.781753,10.8727317 18.316,10.718 L16.316,10.051 C15.7913295,9.87647804 15.224522,10.1603295 15.05,10.685 C14.8754781,11.2096705 15.1593295,11.776478 15.684,11.951 L17.684,12.617 C17.7859674,12.6505176 17.8926659,12.6674002 18,12.667 Z"
+                  id="Path"
+                ></path>{" "}
+                <path
+                  d="M45.684,10.051 L43.684,10.718 C43.1593295,10.892522 42.875478,11.4593295 43.05,11.984 C43.224522,12.5086705 43.7913295,12.792522 44.316,12.618 L46.316,11.952 C46.8406705,11.777478 47.124522,11.2106705 46.95,10.686 C46.775478,10.1613295 46.2086705,9.87747802 45.684,10.052 L45.684,10.051 Z"
+                  id="Path"
+                ></path>{" "}
+              </g>{" "}
+            </g>{" "}
+          </g>
+        </svg>
+        <div className="pt-5">Key Features of Stylify-AI</div>
+        <svg
+          width="60px"
+          height="60px"
+          viewBox="-6 -6 72.00 72.00"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="#000000"
+          stroke="#000000"
+          transform="matrix(-1, 0, 0, -1, 0, 0)"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            {" "}
+            <g
+              fill="none"
+              fill-rule="evenodd"
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+            >
+              {" "}
+              <g
+                fill="#ffffff"
+                id="010---Bow-Tie"
+                transform="translate(-1.000000, 0.000000)"
+              >
+                {" "}
+                <path
+                  d="M60.938,26.026 C59.4320062,18.7524698 59.4320062,11.2475302 60.938,3.974 C61.1599468,2.88877071 60.7584625,1.7703227 59.897,1.074 C59.0039287,0.342851846 57.777505,0.171175665 56.718,0.629 L35.771,9.583 C35.1547513,7.46036576 33.2102802,6.00012924 31,6.00012924 C28.7897198,6.00012924 26.8452487,7.46036576 26.229,9.583 L5.283,0.63 C4.22318641,0.17199989 2.99638291,0.343675222 2.103,1.075 C1.24153747,1.7713227 0.8400532,2.88977071 1.062,3.975 C2.56799721,11.248193 2.56799721,18.752807 1.062,26.026 C0.830971007,27.111651 1.23368277,28.2345973 2.102,28.926 C2.99536267,29.6571316 4.22169495,29.8295122 5.282,29.373 L26.23,20.417 C26.8461708,22.5391387 28.7902174,23.999013 31,23.999013 C33.2097826,23.999013 35.1538292,22.5391387 35.77,20.417 L56.718,29.371 C57.778305,29.8275122 59.0046373,29.6551316 59.898,28.924 C60.7657818,28.2330981 61.168458,27.1110253 60.938,26.026 Z M4.5,27.531 C4.12436756,27.6974506 3.68693822,27.6374492 3.37,27.376 C3.08484552,27.1511762 2.95094807,26.7846997 3.024,26.429 C4.58499664,18.8892814 4.58499664,11.1097186 3.024,3.57 C2.95086927,3.21458698 3.08481712,2.84835963 3.37,2.624 C3.5631648,2.46390956 3.80611846,2.37620577 4.057,2.376 C4.20943073,2.37677615 4.36012573,2.4084119 4.5,2.469 L26,11.66 L26,12.78 L22.2,12.02 C21.6682494,11.93256 21.1628458,12.2822052 21.0571604,12.8106321 C20.951475,13.339059 21.2835226,13.8561944 21.808,13.98 L26.008,14.82 L26.008,15.256 L16.721,18.042 C16.246895,18.1838658 15.9478592,18.6511704 16.0176699,19.1410968 C16.0874807,19.6310233 16.5051393,19.9962043 17,20 C17.0971759,19.9997023 17.1938137,19.9855602 17.287,19.958 L26,17.344 L26,18.344 L4.5,27.531 Z M31,22 C29.3431458,22 28,20.6568542 28,19 L28,11 C28,9.34314575 29.3431458,8 31,8 C32.6568542,8 34,9.34314575 34,11 L34,19 C34,20.6568542 32.6568542,22 31,22 Z M58.979,26.43 C59.0518884,26.7853951 58.9179861,27.1514977 58.633,27.376 C58.3165537,27.6385695 57.8784603,27.6986619 57.503,27.531 L36,18.34 L36,17.34 L44.713,19.954 C44.8059896,19.9829152 44.9026315,19.9984049 45,20 C45.4963547,20.0001151 45.9176738,19.6361355 45.9896594,19.1450285 C46.0616449,18.6539215 45.7625078,18.1843387 45.287,18.042 L36,15.256 L36,14.82 L40.2,13.98 C40.7244774,13.8561944 41.056525,13.339059 40.9508396,12.8106321 C40.8451542,12.2822052 40.3397506,11.93256 39.808,12.02 L36.008,12.78 L36.008,11.66 L57.508,2.469 C57.883358,2.30296549 58.3202763,2.36294985 58.637,2.624 C58.9221829,2.84835963 59.0561307,3.21458698 58.983,3.57 C57.4206873,11.1097826 57.419326,18.8896711 58.979,26.43 Z"
+                  fill-rule="nonzero"
+                  id="Shape"
+                ></path>{" "}
+                <path
+                  d="M18,12.667 C18.4907827,12.6673557 18.9092874,12.3115013 18.9878345,11.8270447 C19.0663816,11.3425882 18.781753,10.8727317 18.316,10.718 L16.316,10.051 C15.7913295,9.87647804 15.224522,10.1603295 15.05,10.685 C14.8754781,11.2096705 15.1593295,11.776478 15.684,11.951 L17.684,12.617 C17.7859674,12.6505176 17.8926659,12.6674002 18,12.667 Z"
+                  id="Path"
+                ></path>{" "}
+                <path
+                  d="M45.684,10.051 L43.684,10.718 C43.1593295,10.892522 42.875478,11.4593295 43.05,11.984 C43.224522,12.5086705 43.7913295,12.792522 44.316,12.618 L46.316,11.952 C46.8406705,11.777478 47.124522,11.2106705 46.95,10.686 C46.775478,10.1613295 46.2086705,9.87747802 45.684,10.052 L45.684,10.051 Z"
+                  id="Path"
+                ></path>{" "}
+              </g>{" "}
+            </g>{" "}
+          </g>
+        </svg>
+      </div>
+      {/* <div className="hiding-overflow overflow-hidden">
         <div className="about bg-[#F2FEFE] p-11 text-left rounded-r-full my-5 mr-10 reveal1">
           <h2 className=" font-bold text-[#00C3E1] text-4xl mb-3">
             Key Features
@@ -33,36 +136,31 @@ export default function LandContent() {
             <li>Personalized recommendations</li>
           </ol>
         </div>
-      </div>
-      <div className="hiding-overflow overflow-hidden">
-        <div className="about bg-[#00C3E1] p-11 text-right rounded-l-full my-5 ml-10  reveal2 ">
-          <h2 className=" font-bold text-4xl mb-3">Virtual Try On</h2>
-          <p className=" text-xl font-medium text-gray-100">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            aperiam repellendus delectus illo tempora officia ex distinctio.
-            Tenetur eius vitae dolorum delectus quos, consequuntur aut ex, nulla
-            ullam ducimus culpa quae fuga labore libero facere fugiat, sint quas
-            beatae! Tempore quae suscipit beatae inventore iure aliquam
-            distinctio asperiores in numquam corporis doloribus a doloremque
-            impedit nobis exercitationem itaque, commodi iusto debitis harum
-            quasi quam, accusamus aperiam minus amet.
+      </div> */}
+      <div className="hiding-overflow overflow-hidden flex flex-row flex-wrap gap-10 m-10 justify-center">
+        <div className=" w-11/12  bg-[#F2FEFE] p-11 text-center rounded-lg reveal1">
+          <h2 className=" font-bold text-[#00C3E1] text-4xl mb-3">
+            Shop "local" on your time
+          </h2>
+          <p className="  text-xl font-medium ">
+            Shop from your local vendors and become a Vocal for Local but in
+            your own free time without being physically present there.
           </p>
         </div>
-      </div>
-      <div className="hiding-overflow overflow-hidden">
-        <div className="about bg-[#F2FEFE] p-11 text-left rounded-r-full my-5 mr-10 reveal1">
+        <div className=" w-11/12 bg-[#00C3E1] p-11 text-center rounded-lg reveal2 ">
+          <h2 className=" font-bold text-4xl mb-3">Virtual Try On</h2>
+          <p className=" text-xl font-medium text-gray-100">
+            Never regret your purchase. Always try before you buy. Just upload
+            your photo and find out if the dress suits you or not!
+          </p>
+        </div>
+        <div className=" w-11/12 bg-[#F2FEFE] p-11 text-center rounded-lg reveal1">
           <h2 className=" font-bold text-[#00C3E1] text-4xl mb-3">
             Bazar Sahayak
           </h2>
           <p className=" text-xl font-medium ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            aperiam repellendus delectus illo tempora officia ex distinctio.
-            Tenetur eius vitae dolorum delectus quos, consequuntur aut ex, nulla
-            ullam ducimus culpa quae fuga labore libero facere fugiat, sint quas
-            beatae! Tempore quae suscipit beatae inventore iure aliquam
-            distinctio asperiores in numquam corporis doloribus a doloremque
-            impedit nobis exercitationem itaque, commodi iusto debitis harum
-            quasi quam, accusamus aperiam minus amet.
+            Our Intelligent bot always at your service. Just ask the product
+            that you need and directly order through it.
           </p>
         </div>
       </div>

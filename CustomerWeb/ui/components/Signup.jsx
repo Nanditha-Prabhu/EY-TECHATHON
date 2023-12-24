@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../assets/styles/common.css";
 import PropTypes from "prop-types";
+import { currentPage } from "./Navbar";
 
 async function signup(credentials) {
   return fetch("http://localhost:3000/signup", {
@@ -13,6 +14,9 @@ async function signup(credentials) {
 }
 
 export default function Signup({ setToken }) {
+
+  currentPage(4)
+
   const [username, setUserName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [emailId, setEmailId] = useState("");

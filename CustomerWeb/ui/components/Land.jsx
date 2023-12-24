@@ -1,7 +1,11 @@
 import "../assets/styles/common.css";
 import React, { useEffect } from "react";
+import { currentPage } from "./Navbar";
 
 const Land = () => {
+
+  currentPage(0)
+
   useEffect(() => {
     function reveal1() {
       let r1 = document.querySelectorAll(".reveal1");

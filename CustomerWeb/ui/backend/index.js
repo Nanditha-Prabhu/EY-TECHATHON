@@ -2,7 +2,6 @@ import cors from "cors"
 import express from "express"
 import mongoose, { setDriver } from "mongoose"
 import User from "./model/User.js"
-import Clothes from "./model/Clothes.js"
 import Items from "./model/Items.js"
 
 import dotenv from "dotenv"

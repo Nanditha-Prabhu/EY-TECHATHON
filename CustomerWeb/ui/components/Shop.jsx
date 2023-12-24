@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
+import { currentPage } from "./Navbar";
 import axios from 'axios'
 import React from 'react'
 import { Star, ChevronDown } from 'lucide-react'
@@ -9,6 +9,8 @@ export const Shop = () => {
   const [clothes, setClothes] = useState([])
   const [prev, setPrev] = useState(0)
   const [next, setNext] = useState(10)
+
+  currentPage(1)
 
   useEffect(() => {
     axios.get('http://localhost:3000/getClothes')
@@ -33,24 +35,27 @@ export const Shop = () => {
           <div className="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10">
             <h2 className="text-sm font-semibold tracking-widest text-gray-500">{cloth.Brand}</h2>
             <h1 className="my-4 text-3xl font-semibold text-gray-200">{cloth.ItemName}</h1>
-            <div className="my-4 flex items-center">
+            {/* <div className="my-4 flex items-center">
               <span className="flex items-center space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={16} className="text-yellow-500" />
                 ))}
                 <span className="ml-3 inline-block text-xs text-gray-300 font-semibold">4 Reviews</span>
               </span>
+            </div> */}
+            <div className="flex items-center">
+                <span className="mr-3 text-gray-300 text-sm font-semibold">Materials used: </span>
+                <p className="text-gray-400">{cloth.MaterialsUsed}</p>
             </div>
-            <p className="leading-relaxed text-gray-400">
-            {cloth.ItemDesc}
-
-            </p>
+            <div>
+              <p className="leading-relaxed text-gray-400">
+              {cloth.ItemDesc}
+              </p>
+            </div>
             <div className="mb-5 mt-6 flex items-center border-b-2 border-gray-100 pb-5">
               <div className="flex items-center">
-                <span className="mr-3 text-gray-300 text-sm font-semibold">Color</span>
-                <button className="h-6 w-6 rounded-full border-2 border-gray-300 focus:outline-none"></button>
-                <button className="ml-1 h-6 w-6 rounded-full border-2 border-gray-300 bg-gray-700 focus:outline-none"></button>
-                <button className="ml-1 h-6 w-6 rounded-full border-2 border-gray-300 bg-green-200 focus:outline-none"></button>
+                <span className="mr-3 text-gray-300 text-sm font-semibold">Occasion: </span>
+                <p className="text-gray-400">{cloth.Occasion}</p>
               </div>
               <div className="ml-auto flex items-center">
                 <span className="mr-3 text-sm text-gray-300 font-semibold">Size</span>

@@ -281,7 +281,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs text-gray-500 dark:text-gray-400">
-          &copy; 2022. Company Name. All rights reserved.
+          &copy; 2023. Stylify-AI. All rights reserved.
         </p>
       </div>
     </footer>

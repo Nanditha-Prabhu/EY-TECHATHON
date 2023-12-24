@@ -1,6 +1,10 @@
 import React from 'react'
+import { currentPage } from './Navbar'
 
 function Signin() {
+
+  currentPage(5)
+
   return (
     <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-lg">

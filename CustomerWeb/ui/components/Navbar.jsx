@@ -4,13 +4,20 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "Shop", href: "/Shop", current: false },
   { name: "Virtual Try-On", href: "#", current: false },
   { name: "Bazar Sahayak", href: "#", current: false },
   { name: "Sign Up", href: "/Signup", current: false },
   { name: "Sign In", href: "/Signin", current: false},
 ];
+
+export function currentPage(page) {
+  for(let i = 0; i<6; i++) {
+    navigation[i].current = false
+  }
+  navigation[page].current = true
+}
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -30,7 +37,7 @@ function classNames(...classes) {
 //   )
 // }
 
-function Navbar() {
+export default function Navbar() {
   return (
     <Disclosure
       as="nav"
@@ -117,6 +124,7 @@ function Navbar() {
                         </button>
                       </span>
                     </div>
+                    
                   </div>
                 </div>
               </div>
@@ -252,4 +260,3 @@ function Navbar() {
   );
 }
 
-export default Navbar;
