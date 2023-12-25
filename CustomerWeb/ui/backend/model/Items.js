@@ -22,6 +22,6 @@ const itemSchema = new Schema({
     "LStock" : String,
 })
 
-const Item = model("StylifyAIClothe", itemSchema, "StylifyAIClothes")
+const Item = model("Item", itemSchema, "StylifyAIClothes")
 
 export default Item
