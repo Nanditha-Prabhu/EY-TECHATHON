@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Shop from "../components/Shop";
 import Signup from "../components/Signup";
 import Signin from "../components/Signin";
+import Cart from "../components/Cart";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,16 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <Signin />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/Cart",
+    element: (
+      <>
+        <Navbar />
+        <Cart />
         <Footer />
       </>
     ),

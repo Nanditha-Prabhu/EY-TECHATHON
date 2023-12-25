@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../assets/styles/common.css";
-import PropTypes from "prop-types";
 
 async function signup(credentials) {
   return fetch("http://localhost:3000/signup", {
@@ -12,7 +11,7 @@ async function signup(credentials) {
   }).then((data) => data.json());
 }
 
-export default function Signup({ setToken }) {
+export default function Signup() {
   const [username, setUserName] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [emailId, setEmailId] = useState("");
@@ -20,14 +19,15 @@ export default function Signup({ setToken }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await signup({
+    const res = await signup({
       username,
       phoneNo,
       emailId,
       password,
     });
-    console.log(username, phoneNo, emailId, password);
-    setToken(token);
+    if (res.success)
+    location.href = "/Signin"
+    console.log(res); // for testing
   };
 
   return (
@@ -172,7 +172,3 @@ export default function Signup({ setToken }) {
     </div>
   );
 }
-
-// Login.propTypes = {
-//   setToken: PropTypes.func.isRequired,
-// };
