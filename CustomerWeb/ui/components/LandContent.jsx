@@ -1,18 +1,16 @@
+import { Link } from "react-router-dom";
+
 export default function LandContent() {
   return (
     <>
-      <div className="hiding-overflow overflow-hidden">
-        <div className="about bg-[#00C3E1] p-11 text-right rounded-lg my-10 reveal2 ">
+      <div id="About" className="hiding-overflow overflow-hidden  flex flex-row justify-center items-center text-center">
+        <div  className="about w-10/12 bg-[#00C3E1] p-11 rounded-lg  my-10 ">
           <h2 className=" font-bold text-4xl mb-3">About Us</h2>
           <p className=" text-xl font-medium text-gray-100">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            aperiam repellendus delectus illo tempora officia ex distinctio.
-            Tenetur eius vitae dolorum delectus quos, consequuntur aut ex, nulla
-            ullam ducimus culpa quae fuga labore libero facere fugiat, sint quas
-            beatae! Tempore quae suscipit beatae inventore iure aliquam
-            distinctio asperiores in numquam corporis doloribus a doloremque
-            impedit nobis exercitationem itaque, commodi iusto debitis harum
-            quasi quam, accusamus aperiam minus amet.
+            Stylify-AI isn't your regular cup of tea. It's the tea with a shot
+            of tech magic! We blend affordable choices with high fashion, making
+            every shopping spree a runway moment. We're not just an app; we're
+            your style friend making your fashion wishes come true.
           </p>
         </div>
       </div>
@@ -67,7 +65,7 @@ export default function LandContent() {
             </g>{" "}
           </g>
         </svg>
-        <div className="pt-5">Key Features of Stylify-AI</div>
+        <div className="pt-5 font-bold">Key Features of Stylify-AI</div>
         <svg
           width="60px"
           height="60px"
@@ -119,49 +117,51 @@ export default function LandContent() {
           </g>
         </svg>
       </div>
-      {/* <div className="hiding-overflow overflow-hidden">
-        <div className="about bg-[#F2FEFE] p-11 text-left rounded-r-full my-5 mr-10 reveal1">
-          <h2 className=" font-bold text-[#00C3E1] text-4xl mb-3">
-            Key Features
-          </h2>
-          <ol className="  text-xl  font-medium ">
-            <li>Easy Shopping</li>
-            <li>
-              <b>Virtual Try On Solutions:</b> Verify how a cloth it looks on
-              you before buying
-            </li>
-            <li>
-              <b>Bazar Sahayak:</b> Our AI-driven Shopping assistant
-            </li>
-            <li>Personalized recommendations</li>
-          </ol>
-        </div>
-      </div> */}
+    
       <div className="hiding-overflow overflow-hidden flex flex-row flex-wrap gap-10 m-10 justify-center">
-        <div className=" w-11/12  bg-[#F2FEFE] p-11 text-center rounded-lg reveal1">
+        <div className=" w-11/12  bg-[#F2FEFE] p-11 text-center rounded-lg reveal1 flex flex-col justify-center ">
           <h2 className=" font-bold text-[#00C3E1] text-4xl mb-3">
             Shop "local" on your time
           </h2>
-          <p className="  text-xl font-medium ">
+          <p className=" mb-10  text-xl font-medium ">
             Shop from your local vendors and become a Vocal for Local but in
             your own free time without being physically present there.
           </p>
+          <Link
+              className=" w-full block sm:inline sm:w-1/5 rounded border border-yellow-500 bg-yellow-500 px-12 py-3 text-sm font-medium text-white hover:bg-yellow-600 hover:text-white focus:outline-none focus:ring active:text-opacity-75 "
+              to="/Shop"
+            >
+              Shop Now!
+            </Link>
+
         </div>
         <div className=" w-11/12 bg-[#00C3E1] p-11 text-center rounded-lg reveal2 ">
           <h2 className=" font-bold text-4xl mb-3">Virtual Try On</h2>
-          <p className=" text-xl font-medium text-gray-100">
+          <p className=" mb-10 text-xl font-medium text-gray-100">
             Never regret your purchase. Always try before you buy. Just upload
             your photo and find out if the dress suits you or not!
           </p>
+          <Link
+              className="w-full block sm:inline sm:w-1/5 rounded border border-yellow-500 bg-yellow-500 px-12 py-3 text-sm font-medium text-white hover:bg-yellow-600 hover:text-white focus:outline-none focus:ring active:text-opacity-75 "
+              to="/Shop"
+            >
+              Try On!
+            </Link>
         </div>
         <div className=" w-11/12 bg-[#F2FEFE] p-11 text-center rounded-lg reveal1">
           <h2 className=" font-bold text-[#00C3E1] text-4xl mb-3">
             Bazar Sahayak
           </h2>
-          <p className=" text-xl font-medium ">
+          <p className=" mb-10 text-xl font-medium ">
             Our Intelligent bot always at your service. Just ask the product
             that you need and directly order through it.
           </p>
+          <Link
+              className="w-full block sm:inline sm:w-1/5 rounded border border-yellow-500 bg-yellow-500 px-12 py-3 text-sm font-medium text-white hover:bg-yellow-600 hover:text-white focus:outline-none focus:ring active:text-opacity-75 "
+              to="/Shop"
+            >
+              Ask A Query
+            </Link>
         </div>
       </div>
     </>

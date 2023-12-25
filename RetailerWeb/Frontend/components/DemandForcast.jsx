@@ -3,6 +3,41 @@ import Navbar from "./Navbar";
 import "../assets/styles/common.css";
 
 function DemandForcast() {
+  const [itemId, setItemId] = useState("");
+  const [prediction, setPrediction] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:5000/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          date: "your_date_here",
+          item_type: "your_item_type_here",
+          gender: "your_gender_here",
+          sleeve: "your_sleeve_here",
+          materials_used: "your_materials_used_here",
+          season: "your_season_here",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setPrediction(data.prediction);
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error state in your component
+    }
+  };
+
+
   return (
     <div className="flex flex-row">
       <Navbar />

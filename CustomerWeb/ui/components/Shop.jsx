@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { currentPage } from "./Navbar";
 import axios from 'axios'
 import React from 'react'
-import { Star, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export const Shop = () => {
 
