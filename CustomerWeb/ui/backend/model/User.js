@@ -1,3 +1,4 @@
+import bcrypt from "bcrypt"
 import mongoose from "mongoose"
 
 const {Schema, model} = mongoose
@@ -25,6 +26,13 @@ const userSchema = new Schema({
     }
 }, {
     timestamps: true
+})
+
+/* Mongoose hook which fires a function before(pre) or after(post) certain event (eg,. saving doc to mongo)  */
+userSchema.pre('save', async function (next) {
+    const salt = await bcrypt.genSalt()
+    this.password = await bcrypt.hash(this.password, salt)
+    next()
 })
 
 const User = model("User", userSchema)

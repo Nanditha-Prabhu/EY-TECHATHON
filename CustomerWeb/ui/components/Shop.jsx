@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { currentPage } from "./Navbar";
 import axios from 'axios'
 import React from 'react'
-import { ChevronDown } from 'lucide-react'
+import { Star, ChevronDown } from 'lucide-react'
+import Cookies from "universal-cookie";
 
 export const Shop = () => {
-
+  const cookies = new Cookies()
   const [clothes, setClothes] = useState([])
   const [prev, setPrev] = useState(0)
   const [next, setNext] = useState(10)
@@ -19,6 +20,34 @@ export const Shop = () => {
         console.log(clothes);
       })
   }, [])
+
+  const addToCart = async (item) => {
+    // Quantity not there in ui, so by default item quantity in cart will be saved as 1 
+    let product_details = {
+      productId: item.ItemId,
+      quantity: 1,
+      name: item.ItemName,
+      price: item.Rate,
+    }
+    console.log(product_details);
+    let res = await fetch("http://localhost:3000/addToCart", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${cookies.get('jwt')}`
+      },
+      body: JSON.stringify(product_details)
+    }).then((data) => data.json())
+    
+    console.log(res);
+    
+    if (res.loc) {
+      alert("User Not signed in")
+      location.href = res.loc
+    } else {
+      alert(item.ItemName + " is added to cart")
+    }
+  }
 
   return (
     <section className="overflow-hidden">
@@ -76,6 +105,7 @@ export const Shop = () => {
               <button
                 type="button"
                 className="rounded-md bg-yellow-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                onClick={() => addToCart(cloth)}
               >
                 Add to Cart
               </button>

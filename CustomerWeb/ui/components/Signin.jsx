@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Cookies from 'universal-cookie'
 import { currentPage } from './Navbar'
 
-function Signin() {
 
+const handleSignIn = async (credentials) => {
+  return fetch("http://127.0.0.1:3000/signin", {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials),
+    credentials: 'include'  // Imp param if cors is used
+  }).then((data) => data.json())
+}
+
+
+function Signin() {
   currentPage(5)
+
+  const [email, setEmailId] = useState("")
+  const [password, setPassword] = useState("")
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const res = await handleSignIn({ 
+      emailId: email, 
+      password: password 
+    })
+    console.log(res);
+    const cookies = new Cookies()
+    if (res.success) {
+      cookies.set("jwt", res.token, { path: '/', secure: true, maxAge: 3*24*60*60 })
+      location.href = "/"
+    }
+    else
+      alert("Wrong Credentials")
+  }
 
   return (
     <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -17,7 +49,7 @@ function Signin() {
         sunt dolores deleniti inventore quaerat mollitia?
       </p>
       <form
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         action=""
         className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
       >
