@@ -1,0 +1,10 @@
+version: "3"
+services:
+  stylify-frontend:
+    image: stylifyc_frontend
+    ports:
+      - 5173:5173
+  stylify-backend:
+    image: stylifyc_backend
+    ports:
+      - 3000:3000
