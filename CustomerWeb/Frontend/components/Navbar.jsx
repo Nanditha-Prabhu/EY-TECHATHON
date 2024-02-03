@@ -71,10 +71,11 @@ export default function Navbar() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigation.map((item, idx) => (
                       <Link
                         key={item.name}
                         to={item.href}
+                        onClick={() => currentPage(idx)}
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
